@@ -1,28 +1,15 @@
-  import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+import 'package:flutter/material.dart';
+void main() => runApp(const MyWalletApp());
+class MyWalletApp extends StatelessWidget {
+  const MyWalletApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'MyWallet',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('MyWallet')),
-      body: const Center(child: Text('Hello MyWallet!')),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('MyWallet')),
+        body: const Center(child: Text('Balance: \$0.00', style: TextStyle(fontSize: 30))),
+      ),
     );
   }
 }
